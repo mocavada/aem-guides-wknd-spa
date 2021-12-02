@@ -1,7 +1,10 @@
 //Header.js
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import wkndLogoDark from '../../media/wknd-logo-dk.png';
 require('./Header.scss');
+
+
 export default class Header extends Component {
 
     get logo() {
@@ -16,7 +19,9 @@ export default class Header extends Component {
         return (
                 <header className="Header">
                     <div className="Header-container">
-                        {this.logo}
+                        <Link to="/content/wknd-spa-react/us/en/home.html">
+                             {this.logo}
+                        </Link>
                     </div>
                 </header>
         );
